@@ -1,18 +1,19 @@
-import { createAsyncThunk, createSlice, SerializedError } from "@reduxjs/toolkit"
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { ProductGetResponse } from "../model/methods/product/ProductGetResponse"
 import { useRoot } from "../hooks/useRoot"
+import { FetchError } from "../root/FetchError"
 
 const { api } = useRoot()
 
 type slice = {
   productState: 'loading' | 'done' | 'error'
   productTypes: ProductGetResponse[]
-  message?: SerializedError
+  errorMessage?: string
 }
 
 const initialState: slice = {
   productState: 'loading',
-  productTypes: []
+  productTypes: [],
 }
 
 export const products = createSlice({
@@ -23,12 +24,16 @@ export const products = createSlice({
     builder.addCase(fetchProducts.pending, (state) => {
       state.productState = 'loading'
     });
-    builder.addCase(fetchProducts.fulfilled, (state) => {
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.productState = 'done'
+
+      if (action.payload) {
+        state.productTypes = action.payload
+      }
     });
     builder.addCase(fetchProducts.rejected, (state, action) => {
       state.productState = 'error'
-      state.message = action.error
+      state.errorMessage = action.payload as string
     });
   }
 })
@@ -37,12 +42,12 @@ export const fetchProducts = createAsyncThunk(
   "products/productsData",
   async (_, { rejectWithValue }) => {
     try {
-      const result = await api.doFetch('/productTypes', 'GET')
-      return result
+     return await api.doFetch('/productTypes', 'GET')
     }
     catch (error) {
-      if (error instanceof Error) {
-        return rejectWithValue(error.message);
+      if (error instanceof FetchError) {
+        console.log(error)
+        return rejectWithValue(error.text)
       }
     }
   },

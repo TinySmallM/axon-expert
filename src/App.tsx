@@ -1,5 +1,7 @@
+import { Outlet } from "react-router"
+
 export const App = () => {
   return (
-    <div>Started</div>
+    <main className="App"><Outlet /></main>
   )
 }

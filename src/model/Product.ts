@@ -1,4 +1,4 @@
-export type ProductGetResponse = { 
+export type Products = {
   id: string
   packsNumber: number
   packageType: 'compression' | 'noCompression'
