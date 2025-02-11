@@ -18,11 +18,15 @@ td {
   max-width: 180px;
 }
 
+.ProductList__description {
+  text-align: center;
+}
+
 .ProductList__buttonGroup {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 10px;
   border: none;
 }
 

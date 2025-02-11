@@ -1,3 +1,3 @@
-import { fetchProducts } from './products'
+import { fetchProducts, createProduct, removeProduct } from './products'
 
-export { fetchProducts }
+export { fetchProducts, createProduct, removeProduct }

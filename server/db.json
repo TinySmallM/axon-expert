@@ -1,0 +1,28 @@
+{
+  "productTypes": [
+    {
+      "packsNumber": 33,
+      "packageType": "компрессия",
+      "isArchived": true,
+      "description": "Dx",
+      "createdAt": "2025-02-11T17:31:04.365Z",
+      "id": 1
+    },
+    {
+      "packsNumber": 22,
+      "packageType": "компрессия",
+      "isArchived": false,
+      "description": "22",
+      "createdAt": "2025-02-11T17:31:43.412Z",
+      "id": 3
+    },
+    {
+      "packsNumber": 11,
+      "packageType": "компрессия",
+      "isArchived": true,
+      "description": "222",
+      "createdAt": "2025-02-11T18:02:14.656Z",
+      "id": 4
+    }
+  ]
+}

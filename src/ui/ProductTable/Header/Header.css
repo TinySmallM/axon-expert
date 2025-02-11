@@ -3,6 +3,7 @@
 }
 
 .Header__title {
+  text-align: start;
   font-weight: 600;
   padding: 10px 12px;
   color: var(--text_color_primary);

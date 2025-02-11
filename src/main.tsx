@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from './store/init'
 import { App } from './App'
 import { ProductTable } from './ui/ProductTable/ProductTable/ProductTable'
+import { Manager } from './ui/ProductTable/Manager/Manager'
 import './styles.css'
 
 createRoot(document.getElementById('root')!).render(
@@ -14,8 +15,9 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<ProductTable />} />
+        <Route element={<App />}>
+          <Route index element={<ProductTable />} />
+          <Route path="create" element={<Manager kind='create' />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,14 +1,17 @@
 :root {
   --fontFamily: 'Montserrat'; 
+  --largeFontSize: 18px;
   --fontSize: 16px;
   --smallFontSize: 14px;
+  --superSmallFontSize: 11px;
 
   --button_background_primary:  #000000;
   --button_background_hover: #F7EE55;
   --button_background_accent: #DA1515;
 
   --text_color_primary: #000000;
-  --text_color_action: #FFFFFF;
+  --text_color_secondary: #FFFFFF;
+  --text_color_action: #000000;
   --text_color_accent: #DA1515;
 
   --border_color_primary: #C5C5C5;
@@ -39,6 +42,7 @@ html, body {
   font-weight: 400;
   height: 100%;
   margin: 0;
+  padding: 15px;
 }
 
 img {
@@ -66,6 +70,6 @@ img, svg {
   box-sizing: border-box;
 }
 
-:focus {
-  outline: none;
+select {
+  cursor: pointer;
 }

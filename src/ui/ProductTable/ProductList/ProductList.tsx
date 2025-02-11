@@ -1,8 +1,10 @@
 import { ComponentPropsWithRef } from "react"
-import * as Product from '../../model/Product'
-import { ButtonIcon } from "../ui/ButtonIcon"
-import { Icon18Edit, Icon18Description, Icon18Delete } from '../../assets/icons'
+import * as Product from '../../../model/Product'
+import { ButtonIcon } from "../../ui/ButtonIcon/ButtonIcon"
+import { Icon18Edit, Icon18Description, Icon18Delete } from '../../../assets/icons'
 import './ProductList.css'
+import { useRootDispatch } from "../../../hooks/useRootDispatch"
+import { removeProduct } from "../../../store/thunks"
 
 type Props = {
   products: Product.Products[]
@@ -13,6 +15,7 @@ const archived = 'Архив'
 const unArchived = 'Активно'
 
 export const ProductList = ({products, names}: Props) => {
+  const dispatch = useRootDispatch()
   //The backend does not contain table headers, and the approach requires them in responsive mode.
   
   return (
@@ -31,7 +34,11 @@ export const ProductList = ({products, names}: Props) => {
           </td>
           <td className="ProductList__buttonGroup">
             <ButtonIcon className="ProductList__icon" icon={<Icon18Edit />} />
-            <ButtonIcon className="ProductList__icon" icon={<Icon18Delete />} />
+            <ButtonIcon 
+              onClick={() => dispatch(removeProduct(item.id))} 
+              className="ProductList__icon" 
+              icon={<Icon18Delete />} 
+            />
           </td>
         </tr>
       ))}
