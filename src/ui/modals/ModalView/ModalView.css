@@ -1,0 +1,38 @@
+.ModalView {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--zIndexModal);
+  visibility: hidden;
+}
+
+.ModalView__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 10px;
+  visibility: hidden;
+}
+
+.ModalView__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  cursor: pointer;
+  visibility: visible;
+}
+
+.ModalView__background--light {
+  background-color: var(--background_modal_light);
+}
+
+.ModalView__content {
+  background: var(--background_modal_content);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.24);
+  visibility: visible;
+}

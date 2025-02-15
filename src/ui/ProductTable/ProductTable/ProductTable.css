@@ -1,0 +1,31 @@
+.Product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.Product__top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1090px;
+  padding-bottom: 40px;
+}
+
+.Product__title {
+  font-size: calc(var(--largeFontSize) + 6px);
+}
+
+.Product__list {
+  width: 100%;
+  max-width: 1090px;
+  border-collapse: collapse;
+}
+
+@media (width < 800px) {
+  .Product__top {
+    flex-direction: column;
+  }
+}

@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { useDispatch } from 'react-redux'
 import { products } from './products'
-// ...
+
 export const store = configureStore({
   reducer: {
     products: products.reducer,
@@ -9,5 +8,5 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat()
 })
 
-export type AppDispatch = typeof store.dispatch
-export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
+export type RootState = ReturnType<typeof store.getState>;
+export type RootDispatch = typeof store.dispatch;

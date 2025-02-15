@@ -1,0 +1,52 @@
+{
+  "productTypes": [
+    {
+      "packsNumber": 22,
+      "packageType": "некомпрессия",
+      "isArchived": false,
+      "description": "2",
+      "createdAt": "2025-02-14T20:33:19.563Z",
+      "id": 2
+    },
+    {
+      "packsNumber": 222222,
+      "packageType": "некомпрессия",
+      "isArchived": true,
+      "description": "",
+      "createdAt": "2025-02-14T20:33:40.136Z",
+      "id": 4
+    },
+    {
+      "packsNumber": 33,
+      "packageType": "компрессия",
+      "isArchived": true,
+      "description": "",
+      "createdAt": "2025-02-14T20:33:51.853Z",
+      "id": 5
+    },
+    {
+      "packsNumber": 1111,
+      "packageType": "некомпрессия",
+      "isArchived": true,
+      "description": "",
+      "createdAt": "2025-02-14T20:34:03.198Z",
+      "id": 6
+    },
+    {
+      "packsNumber": 1111,
+      "packageType": "некомпрессия",
+      "isArchived": true,
+      "description": "",
+      "createdAt": "2025-02-14T20:34:25.822Z",
+      "id": 7
+    },
+    {
+      "packsNumber": 111,
+      "packageType": "некомпрессия",
+      "isArchived": false,
+      "description": "xxx",
+      "createdAt": "2025-02-15T13:12:06.571Z",
+      "id": 9
+    }
+  ]
+}

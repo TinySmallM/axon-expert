@@ -1,4 +1,53 @@
+:root {
+  --fontFamily: 'Montserrat'; 
+  --largeFontSize: 18px;
+  --fontSize: 16px;
+  --smallFontSize: 14px;
+  --superSmallFontSize: 11px;
+
+  --button_background_primary:  #000000;
+  --button_background_hover: #F7EE55;
+  --button_background_accent: #DA1515;
+  --button_background_disabled: #ADADAD;
+  
+
+  --text_color_primary: #000000;
+  --text_color_secondary: #FFFFFF;
+  --text_color_action: #000000;
+  --text_color_accent: #DA1515;
+
+  --border_color_primary: #C5C5C5;
+
+  --icon_color_hover_accent: #DA1515;
+
+  --fastTransition: 0.2s;
+
+  --zIndexModal: 1;
+  --background_modal_light: #00000050;
+  --background_modal_content: #FFFFFF;
+
+  --background_content: #000000;
+}
+
+@font-face {
+  font-family: Montserrat;
+  ascent-override: 100%;
+  font-weight: 400;
+  font-display: block;
+  src: url('./assets/Montserrat-400.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  ascent-override: 100%;
+  font-weight: 600;
+  font-display: block;
+  src: url('./assets/Montserrat-600.ttf');
+}
+
 html, body {
+  font-family: var(--fontFamily);
+  font-weight: 400;
   height: 100%;
   margin: 0;
 }
@@ -28,6 +77,6 @@ img, svg {
   box-sizing: border-box;
 }
 
-:focus {
-  outline: none;
+select {
+  cursor: pointer;
 }

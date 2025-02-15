@@ -1,0 +1,111 @@
+.ProductForm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ProductForm__content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ProductForm__content--checkbox {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.ProductForm__text {
+  pointer-events: all;
+  width: 100%;
+  max-width: 180px;
+  color: var(--text_color_primary);
+}
+
+.ProductForm__text--required {
+  color: var(--text_color_accent);
+}
+
+.ProductForm__inputContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ProductForm__input {
+  width: 100%;
+  max-width: 500px;
+  font-size: var(--fontSize);
+  padding: 8px 16px;
+  color: var(--text_color_primary);
+  border-radius: 6px;
+  border: 1px solid var(--border_color_primary);
+}
+
+.ProductForm__checkbox {
+  pointer-events: all;
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+  border-radius: 6px;
+}
+
+.ProductForm__input--select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3e%3cpath d='M6.19281 8.04448C6.63924 8.48394 7.36424 8.48394 7.81067 8.04448L13.525 2.41948C13.9714 1.98003 13.9714 1.26636 13.525 0.826904C13.0785 0.387451 12.3535 0.387451 11.9071 0.826904L6.99996 5.65737L2.09282 0.83042C1.64639 0.390966 0.921387 0.390966 0.474958 0.83042C0.0285296 1.26987 0.0285296 1.98354 0.474958 2.423L6.18924 8.048L6.19281 8.04448Z' fill='%23AAAAAA'/%3e%3c/svg%3e");
+  background-position: calc(100% - 10px);
+  background-repeat: no-repeat;
+  appearance: none;
+}
+
+.ProductForm__text--description {
+  align-self: flex-start;
+}
+
+.ProductForm__input--description {
+  align-self: flex-start;
+  min-height: 100px;
+  resize: none;
+}
+
+.ProductForm__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.ProductForm__inputError {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 12px;
+  padding-top: 25px;
+  font-size: var(--smallFontSize);
+  color: var(--text_color_accent);
+}
+
+.ProductForm__confirmationDelete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (width < 500px) {
+  .ProductForm__content:not(.ProductForm__content--checkbox) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ProductForm__buttons button {
+    flex-grow: 1;
+  }
+}

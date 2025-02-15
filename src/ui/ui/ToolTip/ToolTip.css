@@ -1,0 +1,23 @@
+.ToolTip {
+  position: relative;
+}
+
+.ToolTip__text {
+  position: absolute;
+  top: 50%; 
+  right: 0; 
+  height: auto;
+  margin-top: 20px;
+  font-size: var(--smallFontSize); 
+  background-color: var(--background_content);
+  color: var(--background_modal_content); 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  z-index: 1; 
+}
+
+@media (width < 800px) {
+  .ToolTip__text--hiddenMobile {
+    display: none;
+  }
+}

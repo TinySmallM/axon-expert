@@ -1,8 +1,6 @@
-export type ProductGetResponse = { 
-  id: string
+export type ProductCreateParams = { 
   packsNumber: number
   packageType: 'компрессия' | 'некомпрессия'
   isArchived: boolean
   description?: string
-  createdAt: string
 }

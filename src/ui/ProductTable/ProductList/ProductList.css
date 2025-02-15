@@ -1,0 +1,94 @@
+.ProductList__line {
+  border: 0.8px solid var(--border_color_primary);
+}
+
+td {
+  padding: 10px 12px;
+  border: 0.8px solid var(--border_color_primary);
+}
+
+.ProductList__text {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: var(--fontSize);
+  color: var(--text_color_primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.ProductList__description {
+  text-align: center;
+}
+
+.ProductList__buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: none;
+}
+
+.ProductList__icon {
+  transition: color var(--fastTransition);
+}
+
+.ProductList__icon:hover {
+  color: var(--icon_color_hover_accent);
+}
+
+.ProductList__confirmationDelete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (width < 1200px) {
+  .ProductList__text {
+    font-size: var(--smallFontSize);
+  }
+}
+
+@media (width < 800px) {
+  .ProductList__line {
+    display: block;
+    margin-bottom: 22px;
+  }
+  
+  td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: transparent;
+  }
+
+  td:last-child {
+    border: 0.8px solid var(--border_color_primary);
+  }
+  
+  td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    font-size: var(--smallFontSize);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .ProductList__description:nth-last-child(-n+2)::before {
+    content: attr(data-description);
+    font-size: var(--smallFontSize);
+    text-align: start;
+    padding-right: 12px;
+    font-weight: 400;
+    text-transform: lowercase;
+    float: left;
+  }
+}

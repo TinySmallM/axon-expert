@@ -1,0 +1,30 @@
+.Button {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border-radius: 10px;
+}
+
+.Button:hover {
+  background-color: var(--button_background_hover);
+  color: var(--text_color_action);
+  transition: color var(--fastTransition), background var(--fastTransition);
+}
+
+.Button:disabled {
+  background-color: var(--button_background_disabled);
+  pointer-events: none;
+  user-select: none;
+}
+
+.Button--primary {
+  background-color: var(--button_background_primary);
+  color: var(--text_color_secondary);
+}
+
+.Button--accent {
+  background-color: var(--button_background_accent);
+  color: var(--text_color_secondary);
+}
